@@ -77,6 +77,25 @@ scene.add(lightHelper, gridHelper);
 const controls = new OrbitControls(camera, renderer.domElement); // listens DOM events on mouse and updates camera position
 // add control.update in animate function to update UI.
 
+function addStar() {
+  const geometry = new THREE.SphereGeometry(0.25, 24, 24); // arguments, 1st radius, 2nd width segments, 2nd height segments
+  const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
+  const star = new THREE.Mesh(geometry, material);
+
+  // generating random numbers for star position
+  const [x, y, z] = Array(3)
+    .fill()
+    .map(() => THREE.MathUtils.randFloatSpread(100));
+  star.position.set(x, y, z);
+  scene.add(star);
+}
+
+Array(200).fill().forEach(addStar);
+
+// adding space texture
+const spaceTexture = new THREE.TextureLoader().load("space.jpg");
+scene.background = spaceTexture;
+
 // recursive function to give an infinite loop to call render method automatically
 function animate() {
   requestAnimationFrame(animate); // a mechanism that tells the browser that you want to perform an animation
