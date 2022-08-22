@@ -1,6 +1,6 @@
 // import three js library
 // import * as THREE from "three";
-import * as THREE from "https://unpkg.com/three@0.143.0/build/three.js";
+import * as THREE from "https://unpkg.com/three@0.143.0/build/three.module.js";
 
 // importing orbit controls for scene helping (see line 77)
 // import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
