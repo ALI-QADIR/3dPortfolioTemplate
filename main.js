@@ -1,5 +1,3 @@
-import "./style.css";
-
 // import three js library
 // import * as THREE from "three";
 import * as THREE from "https://unpkg.com/three@0.143.0/build/three.js";
