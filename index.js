@@ -1,4 +1,4 @@
-import app from "./main";
+import app from "./main.js";
 
 if (window.innerWidth < window.innerHeight) {
   var q = document.querySelector("#phone");
